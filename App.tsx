@@ -6,12 +6,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Header from './components/Header';
 import Home from './screens/Home';
 import MovieDetailed from './screens/MovieDetailed';
+import MovieResult from './models/MovieResult';
 
 export type StackParams = {
   Home;
   MovieDetailed: {
-    imageUri: string;
-    title: string;
+    movieResult: MovieResult;
   };
 };
 const Stack = createNativeStackNavigator<StackParams>();

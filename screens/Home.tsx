@@ -18,11 +18,23 @@ import Movie from '../components/Movie';
 
 //type Props = NativeStackNavigationProp<StackParams, 'Home'>;
 
-const renderImage = (item: MovieResult) => {
-  console.log('From renderimage', item.show.image.medium);
+const renderImage = ({item}: {item: MovieResult}) => {
+  var uri;
+  try {
+    uri = item.show.image.medium;
+  } catch (error) {
+    uri =
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/2560px-Question_Mark.svg.png';
+  }
+
   return (
     <View style={styles.imageContainer}>
-      <Image style={styles.image} source={{uri: item.show.image.medium}} />
+      <Image
+        style={styles.image}
+        source={{
+          uri: uri,
+        }}
+      />
     </View>
   );
 };
@@ -58,7 +70,19 @@ const Home = ({}) => {
             style={styles.flatList}
             data={movieData}
             keyExtractor={(_, index) => index.toString()}
-            renderItem={({item}) => renderImage(item)}
+            renderItem={({item}) => {
+              return (
+                <MovieCard
+                  movieResult={item}
+                  onPress={movieResult => {
+                    navigation.navigate('MovieDetailed', {
+                      movieResult,
+                    });
+                    console.log('Yes u clicked :)');
+                  }}
+                />
+              );
+            }}
           />
         </View>
       )}
@@ -80,7 +104,6 @@ const styles = StyleSheet.create({
   image: {
     height: 100,
     width: 100,
-    resizeMode: 'cover',
   },
 });
 export default Home;

@@ -8,8 +8,12 @@ type Props = NativeStackScreenProps<StackParams, 'MovieDetailed'>;
 const MovieDetailed = ({route}: Props) => {
   return (
     <View>
-      <Image style={styles.image} source={{uri: route.params.imageUri}} />
-      <Text>{route.params.title}</Text>
+      <Image
+        style={styles.image}
+        source={{uri: route.params.movieResult.show.image.medium}}
+      />
+      <Text>{route.params.movieResult.show.name}</Text>
+      <Text>{'Rating: ' + route.params.movieResult.show.rating.average}</Text>
     </View>
   );
 };

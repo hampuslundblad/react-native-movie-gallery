@@ -4,29 +4,29 @@ export interface MovieResult {
 }
 
 export interface Show {
-  id?: string;
-  url?: string;
-  name?: string;
-  type?: string;
-  languages?: string;
-  genres?: string[];
-  status?: string;
-  runtime?: string;
-  averageRuntime?: string;
-  premiered?: string;
-  ended?: string;
-  officialSite?: string;
-  schedule?: Schedule;
-  rating?: Rating;
-  weight?: string;
-  network?: Network;
-  webChannel?: string;
-  dvdCountry?: string;
-  externals?: Externals;
+  id: string;
+  url: string;
+  name: string;
+  type: string;
+  languages: string;
+  genres: string[];
+  status: string;
+  runtime: string;
+  averageRuntime: string;
+  premiered: string;
+  ended: string;
+  officialSite: string;
+  schedule: Schedule;
+  rating: Rating;
+  weight: string;
+  network: Network;
+  webChannel: string;
+  dvdCountry: string;
+  externals: Externals;
   image: Image;
-  summary?: string;
-  updated?: string;
-  _links?: _Links;
+  summary: string;
+  updated: string;
+  _links: _Links;
 }
 
 export interface Schedule {
