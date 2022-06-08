@@ -11,9 +11,14 @@ const MovieDetailed = ({route}: Props) => {
       <Image
         style={styles.image}
         source={{uri: route.params.movieResult.show.image.medium}}
+        testID="movieDetailed_image"
       />
-      <Text>{route.params.movieResult.show.name}</Text>
-      <Text>{'Rating: ' + route.params.movieResult.show.rating.average}</Text>
+      <Text testID="movieDetailed_titleText">
+        {route.params.movieResult.show.name}
+      </Text>
+      <Text testID="'movieDetailed_rating">
+        {'Rating: ' + route.params.movieResult.show.rating.average}
+      </Text>
     </View>
   );
 };

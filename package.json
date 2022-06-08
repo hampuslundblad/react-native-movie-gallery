@@ -2,6 +2,9 @@
   "name": "homeassignmentaz",
   "version": "0.0.1",
   "private": true,
+  "transformIgnorePatterns": [ 
+    "node_modules/(?!((jest-)?react-native|react-navigation|@react-navigation/.*))" 
+  ], 
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -22,6 +25,7 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^9.1.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.67.3",
     "@types/react-test-renderer": "^17.0.1",
@@ -47,5 +51,9 @@
       "json",
       "node"
     ]
+  },
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
   }
 }

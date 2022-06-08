@@ -7,7 +7,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({title}) => {
   return (
-    <View style={styles.header}>
+    <View style={styles.header} testID="app_header">
       <Text style={styles.text}> {title} </Text>
     </View>
   );

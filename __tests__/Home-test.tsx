@@ -1,6 +1,6 @@
 import 'react-native';
 import React from 'react';
-import App from '../App';
+import Home from '../screens/Home';
 
 // Comps
 
@@ -8,10 +8,10 @@ import App from '../App';
 //import renderer from 'react-test-renderer';
 import {render} from '@testing-library/react-native';
 
-describe(App, () => {
-  it('should render header', () => {
-    const page = render(<App />);
-    const header = page.getByTestId('app_header');
+describe(Home, () => {
+  it('should render MovieCards', () => {
+    const page = render(<Home />);
+    const header = page.getByTestId('home_movieCard');
     expect(header).toBeTruthy();
   });
 });
