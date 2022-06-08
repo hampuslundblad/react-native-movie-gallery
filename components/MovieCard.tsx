@@ -26,8 +26,14 @@ const MovieCard: React.FC<Props> = ({movieResult, onPress}) => {
       onPress={() => onPress(movieResult)}
       testID="home_movieCard">
       <View>
-        <Image style={styles.image} source={{uri: imageUri}} />
-        <Text>Title: {movieResult.show.name}</Text>
+        <Image
+          style={styles.image}
+          source={{uri: imageUri}}
+          testID="home_movieCard_image"
+        />
+        <Text testID="home_movieCard_title">
+          Title: {movieResult.show.name}{' '}
+        </Text>
       </View>
     </TouchableOpacity>
   );

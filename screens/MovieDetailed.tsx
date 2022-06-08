@@ -4,13 +4,25 @@ import {View, Image, StyleSheet, Text} from 'react-native';
 import {StackParams} from '../App';
 
 type Props = NativeStackScreenProps<StackParams, 'MovieDetailed'>;
+const CheckIfImageIsNull = (movieResult: MovieResult) => {
+  var imageUri;
+  var defaultImageUri =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Question_Mark.svg/2560px-Question_Mark.svg.png';
+  try {
+    imageUri = movieResult.show.image.medium;
+  } catch (error) {
+    imageUri = defaultImageUri;
+  }
+  return imageUri;
+};
 
 const MovieDetailed = ({route}: Props) => {
+  var imageUri = CheckIfImageIsNull(route.params.movieResult);
   return (
     <View>
       <Image
         style={styles.image}
-        source={{uri: route.params.movieResult.show.image.medium}}
+        source={{uri: imageUri}}
         testID="movieDetailed_image"
       />
       <Text testID="movieDetailed_titleText">

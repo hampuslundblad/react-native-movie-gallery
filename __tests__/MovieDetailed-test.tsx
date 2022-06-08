@@ -10,14 +10,18 @@ import {render} from '@testing-library/react-native';
 import MovieDetailed from '../screens/MovieDetailed';
 import MovieResult from '../models/MovieResult';
 const MovieData: MovieResult = {
-  score = 'hej',
+  score = 'test',
 };
 
 // Need to mock moviedata as prop somehow.
 describe(MovieDetailed, () => {
   it('should render MovieCards', () => {
     const page = render(<MovieDetailed navigation={MovieData} />);
-    const header = page.getByTestId('home_movieCard');
-    expect(header).toBeTruthy();
+    const image = page.getByTestId('movieDetailer_image');
+    expect(image).toBeTruthy();
+    const titleText = page.getByTestId('movieDetailer_titleText');
+    expect(titleText).toBeTruthy();
+    const rating = page.getByTestId('movieDetailer_rating');
+    expect(rating).toBeTruthy();
   });
 });
