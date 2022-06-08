@@ -9,7 +9,6 @@ const ErrorComponent: React.FC<Props> = ({errorMessage}) => {
     <View>
       <Text> Oh no! Something went wrong! </Text>
       <Text> {errorMessage}</Text>
-
     </View>
   );
 };
