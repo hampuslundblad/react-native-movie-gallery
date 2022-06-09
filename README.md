@@ -23,3 +23,6 @@ One of the requirements that were mentioned were testing. This project uses jest
 
 ### Known issues
 -Code duplication of CheckIfImageIsNull in MovieCard and MovieDetailed. Preferably home.tsx should take care of the error handling, or move the api call to another component and do the error handling in there. Also we could create a new object and pass that around and make sure that it doesn't contain any nulls. 
+
+### Other
+I coded this on a windows computer, therefore I was unable to verify that the code works on iOS.
