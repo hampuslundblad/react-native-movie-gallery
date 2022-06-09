@@ -31,6 +31,8 @@ One of the requirements that were mentioned were testing. This project uses jest
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
   }` into package.json. Along with a fileMock.js and stylemock.js.
 
+- Googling to find people with similiar issues, however I was unable to find a solution that worked within the time scope. 
+
 ### Known issues
 - Code duplication of CheckIfImageIsNull in MovieCard and MovieDetailed. Preferably home.tsx should take care of the error handling, or move the api call to another component and do the error handling in there. Also we could create a new object and pass that around and make sure that it doesn't contain any nulls. 
 
