@@ -26,13 +26,13 @@ One of the requirements that were mentioned were testing. This project uses jest
   ],` into package.json
   
   
-  - adding `  "moduleNameMapper": {
+- adding `  "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
   }` into package.json. Along with a fileMock.js and stylemock.js.
 
 ### Known issues
--Code duplication of CheckIfImageIsNull in MovieCard and MovieDetailed. Preferably home.tsx should take care of the error handling, or move the api call to another component and do the error handling in there. Also we could create a new object and pass that around and make sure that it doesn't contain any nulls. 
+- Code duplication of CheckIfImageIsNull in MovieCard and MovieDetailed. Preferably home.tsx should take care of the error handling, or move the api call to another component and do the error handling in there. Also we could create a new object and pass that around and make sure that it doesn't contain any nulls. 
 
 ### Other
 I coded this on a windows computer, therefore I was unable to verify that the code works on iOS.
