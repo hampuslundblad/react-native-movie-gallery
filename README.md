@@ -16,7 +16,7 @@ Then use `npx react-native run-android` in a seperate terminal window, to start 
 Use `npm test` to run the test suite
 
 
-## For AstraZeneca
+## For Company
 
 Hi, my name's Hampus Lundblad and I was tasked with this home assignment. Overall the assignment was very fun and I loved getting to know react-native a bit better.  
 One of the requirements that were mentioned were testing. This project uses jest for testing, however I was unable to run the actual test suite due to an "unexpected token error". This seems to be common when using jest in react-native, and I haven't yet found a solution. However I wrote some simple tests for each screen, which should work in theory. I tried to fix this issue by,
